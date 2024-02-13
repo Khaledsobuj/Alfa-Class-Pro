@@ -14,15 +14,15 @@
 <body class="">
     <main class="min-h-screen bg-[#010313] bg-[url(images/background.png)] bg-no-repeat bg-center">
         <!-- this is home section -->
-        <section class="home min-h-screen text-white font-extrabold flex  justify-center items-center hidden">
+        <section id="home-screen" class=" min-h-screen text-white font-extrabold flex  justify-center items-center ">
             <div class="flex flex-col items-center gap-8 ">
                 <h1 class="text-8xl uppercase">Alpha Clash Pro</h1>
                 <p>Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
-                <button class="btn bg-white text-black">Play Now</button>
+                <button onclick="play()" class="btn bg-white text-black">Play Now</button>
             </div>
         </section>
         <!-- This is Play ground -->
-        <section class="play-ground">
+        <section id="play-ground" class=" hidden">
             <!-- play ground container -->
             <div class="flex flex-col items-center gap-20 pt-20">
                 <!--screen  -->
@@ -74,7 +74,7 @@
                 </div>
                 <!--keyboard End  -->
                 <!--Life line  -->
-                <div class="flex justify-between w-2/4 border ">
+                <div class="flex justify-between w-2/4 ">
                     <button class="btn rounded-full bg-purple-300 text-white px-4">
                         Life
                         <img src="images/Group 23.svg" alt="">
@@ -90,11 +90,20 @@
 
             </div>
         </section>
-        <section class="score">
-
+        <!-- final Score Start -->
+        <section class="score flex justify-center items-center min-h-screen hidden">
+            <div class="text-white text-center space-y-6 bg-[#FFFFFF33] p-4 rounded-lg">
+                <h1 class="text-8xl ">
+                    <span class="font-extrabold ">Score:</span>
+                    <span>14</span>
+                </h1>
+                <button class="btn">Play Again</button>
+                <p>Practice Will make you a Pro</p>
+            </div>
         </section>
     </main>
-
+    <script src="js/utility.js"></script>
+    <script src="js/alpha-clash.js"></script>
 </body>
 
 </html>
